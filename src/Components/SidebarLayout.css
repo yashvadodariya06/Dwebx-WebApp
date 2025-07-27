@@ -1,0 +1,160 @@
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    background: linear-gradient(0deg, #030308, #04192e) !important;
+    background-color: #111;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1050;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(260deg, #030308, #04192e) !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.close-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+    list-style: none;
+    padding: 80px 20px 0 20px; /* adjust top for header */
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Backdrop */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+}
+
+/* Main Content */
+.main-content {
+    transition: filter 0.3s ease;
+}
+
+.main-content.blur {
+    filter: blur(2px);
+}
+
+/* Prevent scrolling when sidebar is open */
+body.sidebar-open {
+    overflow: hidden;
+}
+
+/* Bottom Nav Example Class */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    z-index: 100;
+}
+
+/* 🚨 Logout Popup Fixed */
+.logout-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #1685f30a;
+    padding: 40px 0 60px 0; /* Increased height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: slideUp 0.3s ease-out;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 📦 Popup box */
+.popup-inner {
+    background-color: #04192e;
+    border-radius: 16px;
+    padding: 20px 25px;
+    width: 90%;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+.btn-danger{
+    background-color: #1684f3 !important;
+    border: none !important;
+    padding: 8px 12px !important;
+}
+
+/* Slide animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* Coin animation */
+.text-purple {
+    color: #1684f3;
+}
+
+.coin-animated {
+    animation: pulseCoin 0.3s ease-in-out;
+}
+
+@keyframes pulseCoin {
+    0% {
+        transform: scale(1.1);
+        color: #ffd700;
+    }
+    100% {
+        transform: scale(1);
+    }
+}

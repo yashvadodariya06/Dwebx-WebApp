@@ -1,0 +1,204 @@
+/* Main container */
+.mobile-view {
+  position: relative;
+  height: 95vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+/* Background image layer */
+.mobile-view::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../image/home-bg-2.jpeg'); /* 🔁 Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+/* Gradient overlay */
+.mobile-view::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #030308, #04192e);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+
+.content-wrapper {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.top-section {
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  background: #00f0ff;
+  border-radius: 6px;
+}
+
+.h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.p {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.swipe-button {
+  background: #222;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #444;
+  width: 100%;
+  max-width: 350px;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.swipe-label {
+  flex-grow: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.arrow {
+  background: #007bff;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+}
+
+.draggable-arrow {
+    position: absolute;
+    left: 9px;
+    top: 7px;
+    width: 43px;
+    height: 45px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    transition: transform 0.1s ease-out;
+    z-index: 2;
+}
+/* ========== Responsive Breakpoints ========== */
+
+/* Tablets (min-width: 600px) */
+@media (min-width: 600px) {
+  .icon-placeholder {
+    width: 50px;
+    height: 50px;
+  }
+
+  .h1 {
+    font-size: 32px;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .p {
+    font-size: 16px;
+  }
+
+  .swipe-button {
+    height: 65px;
+    max-width: 400px;
+  }
+
+  .draggable-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    top: 8px;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .content-wrapper {
+    max-width: 600px;
+  }
+
+  .h1 {
+    font-size: 36px;
+  }
+
+  .h2 {
+    font-size: 28px;
+  }
+
+  .p {
+    font-size: 18px;
+  }
+
+  .swipe-button {
+    height: 70px;
+    max-width: 450px;
+  }
+
+  .swipe-label {
+    font-size: 16px;
+  }
+
+  .draggable-arrow {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    top: 7px;
+  }
+}

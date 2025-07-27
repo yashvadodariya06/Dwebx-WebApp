@@ -1,0 +1,108 @@
+/* RabbitRelease.css */
+
+.release-container {
+  padding: 20px;
+  background: linear-gradient(0deg, #030308, #04192e) !important;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto;
+  /* Allow scroll */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+}
+
+/* Hide scrollbar for WebKit (Chrome, Safari) */
+.release-container::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1c6ab8;
+  font-size: 26px;
+}
+
+.release-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.release-card {
+  background: #1c6ab82e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-color: #1c6ab8;
+  /* box-shadow: 0 0px 5px #1c6ab8 !important; */
+}
+
+.release-card:hover {
+  border-color: #1c6ab8;
+  transform: scale(1.03);
+}
+
+.release-card .date {
+  color: #888;
+  font-size: 14px;
+}
+
+.release-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  overflow-y: auto;
+  /* allow modal scroll if needed */
+}
+
+.release-modal::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-content {
+  background: linear-gradient(0deg, #030308, #04192e) !important;
+  padding: 30px;
+  margin-top: px;
+  margin-bottom: 20px;
+  max-width: 700px;
+  width: 90%;
+  border-radius: 12px;
+  overflow-y: auto;
+  max-height: 90vh;
+  color: white;
+  position: relative;
+  scrollbar-width: none;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  font-size: 42px;
+  cursor: pointer;
+  color: #1c6ab8;
+}
+
+.details pre {
+  margin-top: 15px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-family: inherit;
+}

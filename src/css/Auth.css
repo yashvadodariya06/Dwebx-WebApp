@@ -1,0 +1,104 @@
+/* ========== Login Page Styles ========== */
+
+.auth-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.auth-wrapper::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../image/home-bg-2.jpeg'); /* 👈 Use your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.auth-wrapper::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #030308, #04192e);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.auth-box {
+  width: 350px;
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.auth-input {
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  background: linear-gradient(80deg, #001f3f, #0a0a23);
+  color: #fafafa;
+  font-weight: 500;
+}
+
+.auth-input::placeholder {
+  color: #fdfdfd;
+  opacity: 1;
+}
+
+.auth-input:focus {
+  background: linear-gradient(80deg, #001f3f, #0a0a23);
+  color: #fafafa;
+  outline: none;
+  box-shadow: none;
+}
+
+.auth-input:hover {
+  background: linear-gradient(80deg, #001f3f, #0a0a23);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #001f3f inset !important;
+  -webkit-text-fill-color: #fff !important;
+  border: none !important;
+  caret-color: #fff;
+}
+
+.btn-success {
+  background: linear-gradient(80deg, #10467c) !important;
+  border: none !important;
+}
+
+.switch-link {
+  color: #ccc;
+}
+
+.switch-link span {
+  color: #00d4ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-color{
+  color: #10467c !important;
+}

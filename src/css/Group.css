@@ -1,0 +1,145 @@
+.leaderboard-card {
+  /* background: linear-gradient(135deg, #9624dd, #181717) !important; */
+  border: 1px solid #1b70c571;
+  border-radius: 12px;
+}
+
+.text-pulple {
+  color: #1b70c5;
+}
+
+/* Make the container fill the viewport but still scroll */
+.home-container {
+  min-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 80px;
+  /* Leave space for fixed-bottom nav */
+}
+
+/* Optional: Prevent content underlap */
+.fixed-bottom {
+  z-index: 1000;
+}
+
+.text-info {
+  color: #1b70c5 !important;
+}
+
+.rank-circle {
+  /* background: linear-gradient(135deg, #181717, #9624dd);
+  border-radius: 50px; */
+  padding: 6px 12px;
+  color: #1b70c5;
+}
+
+/* Hide scrollbar for Webkit (Chrome, Edge, Safari) */
+.home-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.home-container {
+  scrollbar-width: none;
+}
+
+/* General scrollable behavior */
+.home-container {
+  min-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 80px;
+}
+
+
+
+/* ==================PROFILE  */
+.gradient-input {
+  border: 1px solid #1b70c571;
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  border-radius: 20px;
+  color: #1b70c5 !important;
+  appearance: none;
+  background-color: transparent !important;
+}
+
+.text-blue {
+  color: #ccc;
+}
+
+.gradient-input:focus {
+  border: 1px solid #1b70c5 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-info {
+  background-color: transparent !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  padding: 0 0 0 0 !important;
+  margin: 0 0 0 0px !important;
+}
+
+/* Make default toast icon white */
+.Toastify__toast-icon svg {
+  fill: white !important;
+}
+
+/* Make progress bar white */
+.Toastify__progress-bar {
+  background: white !important;
+}
+
+.bg-share-link {
+  background-color: #1b70c5;
+  padding: 14px 35px;
+  display: inline;
+  border-radius: 30px;
+}
+
+.Copy_code {
+  padding: 14px 48px;
+  border: 1px solid #1b70c5;
+  display: inline;
+  border-radius: 30px;
+}
+
+.center-logo-button {
+  width: 65px;
+  height: 65px;
+  /* background: linear-gradient(160deg, #04192e, #05111d); */
+  background-color: #030308;
+  border-radius: 50%;
+  border: 2px solid #155fa8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px #155fa8;
+  z-index: 10;
+}
+
+.center-logo-img {
+  width: 100px;
+  height: auto;
+  margin-left: 3px;
+  animation: zoomInOut 2s ease-in-out infinite;
+}
+
+.referral-box {
+  /* background-color: #0c0c0f; */
+  border: 1px solid #1b70c571;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  color: white;
+  width: 95%;
+  margin-left: 5px ;
+  /* font-size: 16px; */
+}
