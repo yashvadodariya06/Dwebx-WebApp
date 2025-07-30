@@ -16,6 +16,7 @@ function App() {
   return (
     <Router>
       <Routes>
+
         <Route exact path="/"  element={<SwipeScreen />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
@@ -25,6 +26,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/rabbit-release" element={<RabbitRelease />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        
       </Routes>
     </Router>
   );
